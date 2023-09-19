@@ -1,7 +1,12 @@
 import React from 'react'
 
 export default function Header() {
-  return (
-    <div>Hi </div>
-  )
+    const send =  async() => {
+        let data = await( await fetch("http://127.1.1.2:5082/user")).json()
+        console.log(data);
+}
+send();
+return (
+    <div>Header</div>
+)
 }
